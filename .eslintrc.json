@@ -3,6 +3,9 @@
     "airbnb-base",
     "prettier"
   ],
+  "plugins": [
+    "prettier"
+  ],
   "rules": {
     "no-console": "off",
     "prettier/prettier": [
