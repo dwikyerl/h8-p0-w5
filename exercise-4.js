@@ -3,11 +3,11 @@
 */
 
 function graduates(students) {
-  let output = {};
+  const output = {};
 
   if (students.length === 0) return output;
 
-  for (let student of students) {
+  students.forEach(student => {
     if (!output[student.class]) {
       output[student.class] = [];
     }
@@ -15,10 +15,10 @@ function graduates(students) {
     if (student.score > 75) {
       output[student.class].push({
         name: student.name,
-        score: student.score
+        score: student.score,
       });
     }
-  }
+  });
 
   return output;
 }
@@ -26,25 +26,25 @@ function graduates(students) {
 console.log(
   graduates([
     {
-      name: "Dimitri",
+      name: 'Dimitri',
       score: 90,
-      class: "foxes"
+      class: 'foxes',
     },
     {
-      name: "Alexei",
+      name: 'Alexei',
       score: 85,
-      class: "wolves"
+      class: 'wolves',
     },
     {
-      name: "Sergei",
+      name: 'Sergei',
       score: 74,
-      class: "foxes"
+      class: 'foxes',
     },
     {
-      name: "Anastasia",
+      name: 'Anastasia',
       score: 78,
-      class: "wolves"
-    }
+      class: 'wolves',
+    },
   ])
 );
 
@@ -61,30 +61,30 @@ console.log(
 console.log(
   graduates([
     {
-      name: "Alexander",
+      name: 'Alexander',
       score: 100,
-      class: "foxes"
+      class: 'foxes',
     },
     {
-      name: "Alisa",
+      name: 'Alisa',
       score: 76,
-      class: "wolves"
+      class: 'wolves',
     },
     {
-      name: "Vladimir",
+      name: 'Vladimir',
       score: 92,
-      class: "foxes"
+      class: 'foxes',
     },
     {
-      name: "Albert",
+      name: 'Albert',
       score: 71,
-      class: "wolves"
+      class: 'wolves',
     },
     {
-      name: "Viktor",
+      name: 'Viktor',
       score: 80,
-      class: "tigers"
-    }
+      class: 'tigers',
+    },
   ])
 );
 
@@ -101,4 +101,4 @@ console.log(
 //   ]
 // }
 
-console.log(graduates([])); //{}
+console.log(graduates([])); // {}

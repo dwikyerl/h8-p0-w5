@@ -2,26 +2,25 @@
   Logic Challenge: Melee Ranged Grouping
 */
 
-function meleeRangedGrouping (str) {
-  let output = [];
-  
+function meleeRangedGrouping(str) {
+  const output = [];
+
   if (str.length === 0) return output;
 
   const heroes = str.split(',');
 
-  output.push([],[]);
+  output.push([], []);
 
-  for (let hero of heroes) {
-    let [name, type] = hero.split('-');
+  heroes.forEach(hero => {
+    const [name, type] = hero.split('-');
     if (type.trim() === 'Ranged') {
       output[0].push(name);
     } else if (type.trim() === 'Melee') {
       output[1].push(name);
     }
-  }
+  });
 
   return output;
-  
 }
 
 // TEST CASE
