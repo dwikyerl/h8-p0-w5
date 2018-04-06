@@ -12,7 +12,7 @@ function naikAngkot(arrPenumpang) {
       let from = rute.indexOf(passenger[1]);
       let to = rute.indexOf(passenger[2]);
       let distance = to - from;
-      let cost = 2000 * distance;
+      let cost = Math.abs(2000 * distance);
       passengerObj["penumpang"] = passenger[0];
       passengerObj["naikDari"] = passenger[1];
       passengerObj["tujuan"] = passenger[2];
