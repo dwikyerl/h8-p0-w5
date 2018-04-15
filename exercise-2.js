@@ -3,6 +3,7 @@
 */
 
 function naikAngkot(arrPenumpang) {
+  if (arrPenumpang.length === 0) return [];
   const rute = ['A', 'B', 'C', 'D', 'E', 'F'];
   const output = [];
 
@@ -27,7 +28,7 @@ console.log(naikAngkot([['Dimitri', 'B', 'F'], ['Icha', 'A', 'B']]));
 // [ { penumpang: 'Dimitri', naikDari: 'B', tujuan: 'F', bayar: 8000 },
 //   { penumpang: 'Icha', naikDari: 'A', tujuan: 'B', bayar: 2000 } ]
 
-console.log(naikAngkot([['Aloy', 'C', 'A'], ['Nathan', 'F', 'B']]));
+// console.log(naikAngkot([['Aloy', 'C', 'A'], ['Nathan', 'F', 'B']]));
 // [ { penumpang: 'Aloy', naikDari: 'C', tujuan: 'A', bayar: 4000 },
 //   { penumpang: 'Nathan', naikDari: 'F', tujuan: 'B', bayar: 8000 } ]
 
